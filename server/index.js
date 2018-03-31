@@ -2,6 +2,7 @@ import express from 'express'
 import { Nuxt, Builder } from 'nuxt'
 
 import api from './api'
+import auth from './auth'
 
 const app = express()
 const host = process.env.HOST || '127.0.0.1'
@@ -9,8 +10,9 @@ const port = process.env.PORT || 3000
 
 app.set('port', port)
 
-// Import API Routes
+// Import Routes
 app.use('/api', api)
+app.use('/auth', auth)
 
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
