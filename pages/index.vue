@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .title
 {
   margin: 30px 0;
@@ -40,9 +40,10 @@ export default {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-.user
-{
-  margin: 10px 0;
+
+	.user
+	{
+		margin: 10px 0;
+	}
 }
 </style>
