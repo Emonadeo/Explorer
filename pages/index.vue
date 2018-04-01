@@ -18,7 +18,7 @@
 import axios from '~/plugins/axios'
 
 export default {
-	async asyncData() {
+	async asyncData () {
 		let {
 			data
 		} = await axios.get('/api/users')
@@ -26,7 +26,7 @@ export default {
 			users: data
 		}
 	},
-	head() {
+	head () {
 		return {
 			title: 'Users'
 		}
