@@ -1,52 +1,80 @@
 <template>
   <div>
+		<nav>
+			<nuxt-link to="/">Home</nuxt-link>
+			<nuxt-link to="/discover">Discover</nuxt-link>
+
+
+
+			<section class="user">
+				<a href="#" id="search">
+					<img src="~/assets/icons/search.svg" alt="">
+				</a>
+				<a href="#" id="notifications">
+					<img src="~/assets/icons/notifications.svg" alt="">
+				</a>
+				<a href="#" id="profile">
+					<img src="~/assets/img/dummy.svg" alt="">
+				</a>
+			</section>
+		</nav>
     <nuxt/>
-    <my-footer/>
   </div>
 </template>
 
 <script>
-import MyFooter from '~/components/Footer.vue'
 
 export default {
-	components: {
-		MyFooter
-	}
+
 }
 </script>
 
-<style>
-.container
-{
-  margin: 0;
-  width: 100%;
-  padding: 100px 0;
-  text-align: center;
-}
+<style lang="less" scoped>
+@import "~assets/css/var";
 
-.button, .button:visited
-{
-  display: inline-block;
-  color: black;
-  letter-spacing: 1px;
-  background-color: #fff;
-  border: 2px solid #000;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 15px 45px;
-}
+nav {
+	background: #214235;
+	background: linear-gradient(90deg, #374f2f 0%, #00474b 100%);
+	color: white;
+	display: flex;
+	font-family: @font-display;
+	padding: 0 10vw;
 
-.button:hover, .button:focus
-{
-  color: #fff;
-  background-color: #000;
-}
+	> a {
+		border-bottom: 2px solid transparent;
+		display: block;
+		font-size: 1.3em;
+		font-weight: 900;
+		padding: 0.7em 0;
+		text-transform: uppercase;
 
-.title
-{
-  color: #000;
-  font-weight: 300;
-  font-size: 2.5em;
-  margin: 0;
+		&.nuxt-link-exact-active {
+			border-bottom: 2px solid white;
+		}
+
+		&:not(:last-of-type) {
+			margin-right: 2em;
+		}
+	}
+
+	.user {
+		display: flex;
+		flex: 1;
+		justify-content: flex-end;
+		align-items: center;
+
+		a:not(:first-of-type) {
+			margin-left: 1em;
+		}
+
+		#profile {
+			display: flex;
+
+			img {
+				border-radius: 50%;
+				height: 2.5em;
+			}
+		}
+	}
 }
 </style>
