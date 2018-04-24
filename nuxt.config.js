@@ -36,5 +36,9 @@ module.exports = {
 				})
 			}
 		}
-	}
+	},
+	/*
+	** Plugins
+	*/
+	plugins: ['~/plugins/i18n.js']
 }

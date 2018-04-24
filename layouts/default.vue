@@ -1,10 +1,8 @@
 <template>
   <div>
 		<nav>
-			<nuxt-link to="/">Home</nuxt-link>
-			<nuxt-link to="/discover">Discover</nuxt-link>
-
-
+			<nuxt-link to="/">{{ $t('links.home') }}</nuxt-link>
+			<nuxt-link to="/discover">{{ $t('links.discover') }}</nuxt-link>
 
 			<section class="user">
 				<a href="#" id="search">
@@ -18,7 +16,9 @@
 				</a>
 			</section>
 		</nav>
-    <nuxt/>
+		<!-- <section id="app"> -->
+    	<nuxt/>
+		<!-- </section> -->
   </div>
 </template>
 
@@ -38,7 +38,7 @@ nav {
 	color: white;
 	display: flex;
 	font-family: @font-display;
-	padding: 0 10vw;
+	padding: @padding;
 
 	> a {
 		border-bottom: 2px solid transparent;

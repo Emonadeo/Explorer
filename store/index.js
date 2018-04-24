@@ -1,4 +1,5 @@
 export const state = () => ({
+	locale: 'en',
 	user: null
 })
 

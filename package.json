@@ -24,7 +24,8 @@
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.4",
     "sha1": "^1.1.1",
-    "source-map-support": "^0.4.15"
+    "source-map-support": "^0.4.15",
+    "vue-i18n": "^7.6.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
