@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
 		<nav>
 			<nuxt-link to="/">{{ $t('links.home') }}</nuxt-link>
 			<nuxt-link to="/discover">{{ $t('links.discover') }}</nuxt-link>
@@ -16,9 +16,7 @@
 				</a>
 			</section>
 		</nav>
-		<!-- <section id="app"> -->
-    	<nuxt/>
-		<!-- </section> -->
+    <nuxt/>
   </div>
 </template>
 
@@ -31,6 +29,12 @@ export default {
 
 <style lang="less" scoped>
 @import "~assets/css/var";
+
+#app {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
 
 nav {
 	background: #214235;
@@ -45,6 +49,7 @@ nav {
 		display: block;
 		font-size: 1.3em;
 		font-weight: 900;
+		letter-spacing: 0.03em;
 		padding: 0.7em 0;
 		text-transform: uppercase;
 

@@ -1,28 +1,23 @@
 <template lang="html">
-	<div class="container">
+	<div class="container index">
 		<section class="widgets">
 			<tlog class="tlog"></tlog>
 			<div class="meetup">
 
 			</div>
 		</section>
-		<section class="feed">
-			<div class="nav">
-
-			</div>
-			<div class="items">
-
-			</div>
-		</section>
+		<feed></feed>
 	</div>
 </template>
 
 <script>
 import tlog from '~/components/widgets/tlog.vue'
+import feed from '~/components/widgets/feed.vue'
 
 export default {
 	components: {
-		'tlog': tlog
+		tlog,
+		feed
 	}
 }
 </script>
@@ -30,13 +25,14 @@ export default {
 <style scoped lang="less">
 @import "~assets/css/var.less";
 
-.container {
+.index {
 	display: grid;
+	flex: 1;
 	grid-template-columns: 1fr 2fr;
 	grid-template-rows: 1fr;
 	grid-gap: 1em;
 	padding-top: 2em;
-	min-height: 100vh;
+	padding-bottom: 2em;
 }
 
 .tlog {
