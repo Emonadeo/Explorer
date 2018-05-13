@@ -2,9 +2,7 @@
 	<div class="container index">
 		<section class="widgets">
 			<tlog class="tlog"></tlog>
-			<div class="meetup">
-
-			</div>
+			<meetups class="meetups"></meetups>
 		</section>
 		<feed></feed>
 	</div>
@@ -13,17 +11,19 @@
 <script>
 import tlog from '~/components/widgets/tlog.vue'
 import feed from '~/components/widgets/feed.vue'
+import meetups from '~/components/widgets/meetups.vue'
 
 export default {
 	components: {
 		tlog,
-		feed
+		feed,
+		meetups
 	}
 }
 </script>
 
 <style scoped lang="less">
-@import "~assets/css/var.less";
+@import "~assets/css/main.less";
 
 .index {
 	display: grid;
@@ -35,7 +35,11 @@ export default {
 	padding-bottom: 2em;
 }
 
-.tlog {
-	height: 20em;
+.widgets {
+	min-width: 400px;
+}
+
+.meetups {
+	margin-top: 1em;
 }
 </style>

@@ -42,7 +42,7 @@ export default {
 			padding: 1.5em;
 
 			h1 {
-				margin-top: 1em;
+				margin-top: 0.8em;
 			}
 		}
 	}
