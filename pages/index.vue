@@ -1,9 +1,7 @@
 <template lang="html">
 	<div class="container">
 		<section class="widgets">
-			<div class="tlog">
-
-			</div>
+			<tlog class="tlog"></tlog>
 			<div class="meetup">
 
 			</div>
@@ -20,17 +18,28 @@
 </template>
 
 <script>
+import tlog from '~/components/widgets/tlog.vue'
+
 export default {
+	components: {
+		'tlog': tlog
+	}
 }
 </script>
 
 <style scoped lang="less">
+@import "~assets/css/var.less";
+
 .container {
 	display: grid;
-	grid-template-columns: 1fr 1.61fr;
+	grid-template-columns: 1fr 2fr;
 	grid-template-rows: 1fr;
 	grid-gap: 1em;
 	padding-top: 2em;
 	min-height: 100vh;
+}
+
+.tlog {
+	height: 20em;
 }
 </style>

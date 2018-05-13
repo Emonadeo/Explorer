@@ -11,7 +11,8 @@ module.exports = {
 		],
 		link: [
 			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Bungee|IBM+Plex+Sans:100,200,300,400,500,600,700|Open+Sans:300,400,600,700,800|Quicksand:300,400,500,700|Source+Sans+Pro:200,300,400,600,700,900' }
+			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Bungee|IBM+Plex+Sans:100,200,300,400,500,600,700|Open+Sans:300,400,600,700,800|Quicksand:300,400,500,700|Source+Sans+Pro:200,300,400,600,700,900' },
+			{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
 		]
 	},
 	/*
